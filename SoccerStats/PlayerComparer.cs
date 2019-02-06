@@ -10,19 +10,7 @@ namespace SoccerStats
     {
         public int Compare(Player x, Player y)
         {
-            if (x.PointsPerGame < y.PointsPerGame)
-            {
-                return -1;
-            }
-            else if (x.PointsPerGame == y.PointsPerGame)
-            {
-                return 0;
-            }
-            else if (x.PointsPerGame > y.PointsPerGame)
-            {
-                return 1;
-            }
-            return 0;
+            return x.PointsPerGame.CompareTo(y.PointsPerGame) * -1;
         }
     }
 }
